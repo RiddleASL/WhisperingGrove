@@ -14,7 +14,7 @@ public class playerMotor : MonoBehaviour
     [Header("Global Movement")]
     [SerializeField] float defaultSpeed = 0f;
     [SerializeField] float sprintSpeed = 0f;
-    [SerializeField] float jumpHeight = 2f;
+    [SerializeField] float jumpForce = 2f;
     [SerializeField] float gravity = -9.81f;
     float currentSpeed;
     Vector3 move;
@@ -30,11 +30,13 @@ public class playerMotor : MonoBehaviour
     [SerializeField] Transform GFX;
     [SerializeField] float turnSpeed = 1f;
 
-    int playerType = 0; // 0 = spririt, 1 = mouse, 2 = bird
+    int playerType; // 0 = spririt, 1 = mouse, 2 = bird
 
     private void Start() {
         if(con == null) con = GetComponent<CharacterController>();
         if(type == null) type = GameObject.Find("GlobalVariables").GetComponent<playerType>();
+
+        handlePlayerType();
         currentSpeed = defaultSpeed;
     }
 
@@ -105,7 +107,7 @@ public class playerMotor : MonoBehaviour
         Debug.Log("Jump");
         if(context.performed){
             if(isGrounded){
-                yVel = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                yVel = jumpForce;
             }
         }
     }

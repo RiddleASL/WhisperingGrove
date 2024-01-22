@@ -51,6 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Whispering Grove.sln",
+    "dotnet.defaultSolution": "WhisperingGrove.sln",
     "dotnet.preferCSharpExtension": true
 }
