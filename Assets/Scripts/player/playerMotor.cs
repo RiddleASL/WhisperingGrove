@@ -34,6 +34,7 @@ public class playerMotor : MonoBehaviour
     [SerializeField] float turnSpeed = 1f;
 
     public int playerType; // 0 = spririt, 1 = mouse, 2 = bird
+    int maxType = 1;
 
     private void Start()
     {
@@ -172,6 +173,27 @@ public class playerMotor : MonoBehaviour
             {
                 yVel = jumpForce;
             }
+        }
+    }
+
+    public void nextVessel(InputAction.CallbackContext context)
+    {
+        
+        if (context.performed)
+        {
+            if (playerType == maxType) playerType = 0;
+            else playerType++;
+            handlePlayerType();
+        }
+    }
+
+    public void previousVessel(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (playerType == maxType) playerType = 1;
+            else playerType--;
+            handlePlayerType();
         }
     }
 
