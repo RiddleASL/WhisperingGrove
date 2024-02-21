@@ -56,6 +56,7 @@ public class playerMotor : MonoBehaviour
     void handlePlayerType()
     {
         accelSpeed = type.getAccel(playerType);
+        yVel = 0;
 
         switch (playerType)
         {
@@ -191,7 +192,7 @@ public class playerMotor : MonoBehaviour
     {
         if (context.performed)
         {
-            if (playerType == maxType) playerType = 1;
+            if (playerType == 0) playerType = 1;
             else playerType--;
             handlePlayerType();
         }
