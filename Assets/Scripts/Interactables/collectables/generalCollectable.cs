@@ -7,6 +7,7 @@ public class generalCollectable : MonoBehaviour
     public List<GameObject> hideOnTrigger;
     public List<GameObject> showOnTrigger;
     public float destroyTimer;
+    [SerializeField] int collectableType; // 0 = diamond, 1 = ring
 
     public void Triggered()
     {
@@ -25,6 +26,8 @@ public class generalCollectable : MonoBehaviour
                 obj.SetActive(true);
             }
         }
+
+        GameObject.FindGameObjectWithTag("Collectables").GetComponent<CollectableTrackers>().removeCollectable(collectableType);
 
         Destroy(this.gameObject, destroyTimer);
     }

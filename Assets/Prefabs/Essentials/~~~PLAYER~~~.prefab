@@ -9743,7 +9743,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8450551756612935684}
+  m_Father: {fileID: 8450551757116456480}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &8450551756323204317
@@ -9758,7 +9758,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.06132078, g: 0.84369326, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 4
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -9840,7 +9840,7 @@ GameObject:
   - component: {fileID: 8450551756593910988}
   - component: {fileID: 8450551756593910989}
   - component: {fileID: 8450551756593910986}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -9978,7 +9978,6 @@ Transform:
   - {fileID: 8450551756653892427}
   - {fileID: 8272230096468202667}
   - {fileID: 8450551756874761159}
-  - {fileID: 8450551756323204319}
   m_Father: {fileID: 8450551757116456480}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16637,6 +16636,7 @@ Transform:
   - {fileID: 8450551756612935684}
   - {fileID: 8450551755755535871}
   - {fileID: 8450551756783469383}
+  - {fileID: 8450551756323204319}
   m_Father: {fileID: 8450551756879476680}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16796,7 +16796,7 @@ MonoBehaviour:
     m_Bits: 17
   GFX: {fileID: 8450551756612935684}
   turnSpeed: 0.5
-  playerType: 1
+  playerType: 0
 --- !u!1 &8450551757226669820
 GameObject:
   m_ObjectHideFlags: 0
